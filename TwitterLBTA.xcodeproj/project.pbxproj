@@ -162,10 +162,10 @@
 				D515584C1F66988D007516C8 /* Controller */,
 				D5519E4F1F652D51000F6E91 /* AppDelegate.swift */,
 				D5519E7D1F652EE1000F6E91 /* HomeController.swift */,
+				D5519E7F1F653253000F6E91 /* WordCell.swift */,
 				D5519E561F652D51000F6E91 /* Assets.xcassets */,
 				D5519E581F652D51000F6E91 /* LaunchScreen.storyboard */,
 				D5519E5B1F652D51000F6E91 /* Info.plist */,
-				D5519E7F1F653253000F6E91 /* WordCell.swift */,
 			);
 			path = TwitterLBTA;
 			sourceTree = "<group>";

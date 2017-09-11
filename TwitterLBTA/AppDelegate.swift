@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let homeController = HomeController(collectionViewLayout: layout)
 //        window?.rootViewController = UINavigationController(rootViewController: homeController)
         
-        // change to HomeDataSourceController (based on LBTAComponents
+        // change to HomeDataSourceController (based on LBTAComponents)
         window?.rootViewController = UINavigationController(rootViewController: HomeDataSourceController())
         
         

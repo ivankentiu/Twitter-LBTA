@@ -17,6 +17,11 @@ class HomeDataSourceController: DatasourceController {
         self.datasource = homeDatasource
     }
     
+    // Size of each individual cell for each User
+    override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 150)
+    }
+    
     // refsizeheader (size of header inside of collectionView) now it renders!
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.width, height: 50)
@@ -24,6 +29,6 @@ class HomeDataSourceController: DatasourceController {
     
     // refsizefooter (size of header inside of collectionView) now it renders!
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 50)
+        return CGSize(width: view.frame.width, height: 100)
     }
 }
