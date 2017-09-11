@@ -20,9 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let layout = UICollectionViewFlowLayout()
-        let homeController = HomeController(collectionViewLayout: layout)
-        window?.rootViewController = UINavigationController(rootViewController: homeController)
+//        let layout = UICollectionViewFlowLayout()
+//        let homeController = HomeController(collectionViewLayout: layout)
+//        window?.rootViewController = UINavigationController(rootViewController: homeController)
+        
+        // change to HomeDataSourceController (based on LBTAComponents
+        window?.rootViewController = UINavigationController(rootViewController: HomeDataSourceController())
         
         
         return true

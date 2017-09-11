@@ -1,0 +1,6 @@
+framework module Pods_TwitterLBTATests {
+  umbrella header "Pods-TwitterLBTATests-umbrella.h"
+
+  export *
+  module * { export * }
+}
