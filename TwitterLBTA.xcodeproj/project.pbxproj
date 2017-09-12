@@ -13,6 +13,7 @@
 		D51558501F669923007516C8 /* UserHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D515584F1F669923007516C8 /* UserHeaderFooter.swift */; };
 		D51558521F6699E4007516C8 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51558511F6699E4007516C8 /* HomeDatasource.swift */; };
 		D53DCD7A1F67C53A00F21451 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DCD791F67C53A00F21451 /* UserCell.swift */; };
+		D53DCD7C1F67E5F500F21451 /* HomeDatasourceController+navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53DCD7B1F67E5F500F21451 /* HomeDatasourceController+navbar.swift */; };
 		D5519E501F652D51000F6E91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5519E4F1F652D51000F6E91 /* AppDelegate.swift */; };
 		D5519E5A1F652D51000F6E91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5519E581F652D51000F6E91 /* LaunchScreen.storyboard */; };
 		D5519E651F652D51000F6E91 /* TwitterLBTATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5519E641F652D51000F6E91 /* TwitterLBTATests.swift */; };
@@ -56,6 +57,7 @@
 		D515584F1F669923007516C8 /* UserHeaderFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHeaderFooter.swift; sourceTree = "<group>"; };
 		D51558511F6699E4007516C8 /* HomeDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
 		D53DCD791F67C53A00F21451 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		D53DCD7B1F67E5F500F21451 /* HomeDatasourceController+navbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+navbar.swift"; sourceTree = "<group>"; };
 		D5519E4C1F652D51000F6E91 /* TwitterLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5519E4F1F652D51000F6E91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5519E591F652D51000F6E91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				D56D48631F6578A100D7E6CC /* HomeDataSourceController.swift */,
+				D53DCD7B1F67E5F500F21451 /* HomeDatasourceController+navbar.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53DCD7C1F67E5F500F21451 /* HomeDatasourceController+navbar.swift in Sources */,
 				D53DCD7A1F67C53A00F21451 /* UserCell.swift in Sources */,
 				D5519E801F653253000F6E91 /* WordCell.swift in Sources */,
 				D56D48641F6578A100D7E6CC /* HomeDataSourceController.swift in Sources */,
