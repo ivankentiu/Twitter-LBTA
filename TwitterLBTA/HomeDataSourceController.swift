@@ -17,9 +17,33 @@ class HomeDataSourceController: DatasourceController {
         self.datasource = homeDatasource
     }
     
+    // Line Spacing For Each Cell
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
     // Size of each individual cell for each User
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 150)
+        
+        if let user = self.datasource?.item(indexPath) as? User {
+//            user.bioText
+            // base on how wide the screen is! from UserCell(leftConstant) - textView has some padding so 12 not 8
+            let approximateWidthOfBioTextView = view.frame.width - 12 - 50 - 12 - 2
+            
+            let size = CGSize(width: approximateWidthOfBioTextView, height: 1000)
+            
+            // from bioTextView Font size which is 15
+            let attributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 15)]
+            
+            // let's get an estimation height of our cell based on user.bioText (multiline so adjust the size of cell)
+            let estimatedFrame = NSString(string: user.bioText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+            
+            return CGSize(width: view.frame.width, height: estimatedFrame.height + 66)
+            
+        }
+        
+        
+        return CGSize(width: view.frame.width, height: 200)
     }
     
     // refsizeheader (size of header inside of collectionView) now it renders!
