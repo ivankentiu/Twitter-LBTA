@@ -11,7 +11,15 @@ import LBTAComponents
 // custom implementation of Datasource
 class HomeDataSource: Datasource {
     
-    let words = ["user1", "user2", "user3"]
+    let users: [User] = {
+        let ivanUser = User(name: "Ivan Tiu", username: "@buildthatapp", bioText: "SiPhone, iPad, IOS, Programming Community. Join us to learn Swift, Objective-C and build IOS apps!", profileImage: #imageLiteral(resourceName: "Ivan"))
+        
+        let rayUser = User(name: "Ray Wenderlich", username: "@rwenderlich", bioText: "Ray Wenderlich is an iPhone developer and tweets on topics related to iPhone, software, and gaming. Check out our conference.", profileImage: #imageLiteral(resourceName: "ray_profile_image"))
+        
+        return [ivanUser, rayUser]
+    }()
+    
+    // let words = ["user1", "user2", "user3"]
     
     // Why array of class instead of just the class? * collectionView can have more than one section (slot)
     
@@ -32,10 +40,10 @@ class HomeDataSource: Datasource {
     
     // Render words on list easy!, no need to register, dequeue and which row the items belong!
     override func item(_ indexPath: IndexPath) -> Any? {
-        return words[indexPath.item]
+        return users[indexPath.item]
     }
     
     override func numberOfItems(_ section: Int) -> Int {
-        return words.count
+        return users.count
     }
 }
