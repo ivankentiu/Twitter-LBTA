@@ -28,6 +28,16 @@ extension HomeDataSourceController {
         // background color of the navigation bar (navigation has default translucency value(can be disabled))
         navigationController?.navigationBar.backgroundColor = .white
         navigationController?.navigationBar.isTranslucent = false
+        
+        // remove the thick line
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
+        // add our own line
+        let navBarSeparatorView = UIView()
+        navBarSeparatorView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
+        view.addSubview(navBarSeparatorView)
+        navBarSeparatorView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0.5)
     }
     
     // follow Button on the left

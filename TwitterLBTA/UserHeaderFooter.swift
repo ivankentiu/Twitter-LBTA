@@ -23,6 +23,9 @@ class UserHeader: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
+        
+        backgroundColor = .white
+        
         addSubview(textLabel)
         
         // separator from class DatasourceCell
@@ -49,14 +52,21 @@ class UserFooter: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
-        addSubview(textLabel)
         
         // separator from class DatasourceCell
         separatorLineView.isHidden = false
         separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
-
         
-        textLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        // add background within gap (cool trick)
+        let whiteBackgroundView = UIView()
+        whiteBackgroundView.backgroundColor = .white
+        
+        addSubview(whiteBackgroundView)
+        addSubview(textLabel)
+        
+        whiteBackgroundView.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 14, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
+        textLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 12, bottomConstant: 14, rightConstant: 0, widthConstant: 0, heightConstant: 0)
    
     }
 }

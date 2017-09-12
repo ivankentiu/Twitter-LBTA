@@ -21,6 +21,8 @@ class HomeDataSource: Datasource {
         return [ivanUser, rayUser, kindleCourseUser]
     }()
     
+    let tweets = ["tweet1", "tweet2"]
+    
     // let words = ["user1", "user2", "user3"]
     
     // Why array of class instead of just the class? * collectionView can have more than one section (slot)
@@ -35,9 +37,9 @@ class HomeDataSource: Datasource {
         return [UserFooter.self]
     }
     
-    // place custom DatasourceCell here! easy!
+    // place custom DatasourceCell here! TweetCell on 2nd Section!
     override func cellClasses() -> [DatasourceCell.Type] {
-        return [UserCell.self]
+        return [UserCell.self, TweetCell.self]
     }
     
     // Render words on list easy!, no need to register, dequeue and which row the items belong!
@@ -45,7 +47,14 @@ class HomeDataSource: Datasource {
         return users[indexPath.item]
     }
     
+    override func numberOfSections() -> Int {
+        return 2
+    }
+    
     override func numberOfItems(_ section: Int) -> Int {
+        if section == 1 {
+            return tweets.count
+        }
         return users.count
     }
 }
