@@ -10,6 +10,11 @@ import LBTAComponents
 
 class HomeDataSourceController: DatasourceController {
     
+    //  make it look good on landscape mode
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectionViewLayout.invalidateLayout()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
