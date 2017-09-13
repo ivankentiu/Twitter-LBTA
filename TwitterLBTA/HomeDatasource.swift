@@ -21,7 +21,14 @@ class HomeDataSource: Datasource {
         return [ivanUser, rayUser, kindleCourseUser]
     }()
     
-    let tweets = ["tweet1", "tweet2"]
+    let tweets: [Tweet] = {
+        let ivanUser = User(name: "Ivan Tiu", username: "@buildthatapp", bioText: "SiPhone, iPad, IOS, Programming Community. Join us to learn Swift, Objective-C and build IOS apps!", profileImage: #imageLiteral(resourceName: "Ivan"))
+        
+        let tweet = Tweet(user: ivanUser, message: "Welcome to episode 9 of the twitter series, really hope you guys are enjoying the series so far, I really really need a long text block to render out so we're going to stop here")
+        
+        let tweet2 = Tweet(user: ivanUser, message: "Welcome to episode 9 of the twitter series, really hope you guys are enjoying the series so far, I really really need a long text block to render out so we're going to stop here")
+        return [tweet, tweet2]
+    }()
     
     // let words = ["user1", "user2", "user3"]
     
@@ -44,6 +51,9 @@ class HomeDataSource: Datasource {
     
     // Render words on list easy!, no need to register, dequeue and which row the items belong!
     override func item(_ indexPath: IndexPath) -> Any? {
+        if indexPath.section == 1 {
+            return tweets[indexPath.item]
+        }
         return users[indexPath.item]
     }
     

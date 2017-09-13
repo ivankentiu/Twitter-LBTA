@@ -33,7 +33,6 @@ class HomeDataSourceController: DatasourceController {
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if let user = self.datasource?.item(indexPath) as? User {
-//            user.bioText
             // base on how wide the screen is! from UserCell(leftConstant) - textView has some padding so 12 not 8
             let approximateWidthOfBioTextView = view.frame.width - 12 - 50 - 12 - 2
             
